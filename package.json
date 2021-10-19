@@ -1,0 +1,28 @@
+{
+  "name": "frontend-project-lvl2",
+  "version": "1.0.0",
+  "description": "frontend-project",
+  "main": "src/index.js",
+  "bin": {
+    "nodejs-package": "bin/genDiff.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laytep/frontend-project-lvl2.git"
+  },
+  "author": "Laytep",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Laytep/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/Laytep/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^8.2.0",
+    "lodash": "^4.17.21",
+    "node": "^16.10.0"
+  }
+}
