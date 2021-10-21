@@ -1,20 +1,23 @@
 #!/usr/bin/env node
 
-const { Command } = require('commander'); // (normal include)
-// const { Command } = require('../'); // include commander in git clone of commander repo
+import { Command } from 'commander/esm.mjs';
+import genDiff from '../src/index.js';
+
 const program = new Command();
 
 program
   .name("gendiff")
-  .usage('[options] <filepath1> <filepath2>')
   .description('Compares two configuration files and shows a difference.')
+  .arguments('<filepath1> <filepath2>')
   .option('-V, --version', 'output the version number')
   .option('-f, --format [type]', 'output format')
-
+  .action((filepath1, filepath2) => {
+    console.log(genDiff(filepath1, filepath2))
+  })
   
-program.parse();
 
-program.addHelpText('beforeAll',);
+
+program.parse(process.argv);
 
 
 
