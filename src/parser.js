@@ -1,9 +1,5 @@
-import { readFileSync } from 'fs';
+import { readFileSync } from "fs";
 
-
-const parser = (directory) => {
-    return JSON.parse(readFileSync(`../${directory}`))
-}
-
+const parser = (directory) => JSON.parse(readFileSync(`../${directory}`));
 
 export default parser;
