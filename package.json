@@ -8,7 +8,8 @@
     "gendiff": "bin/genDiff.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "npx -n --experimental-vm-modules jest",
+    "test:watch": "npx -n --experimental-vm-modules jest --coverage --watch"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "@jest/globals": "^27.3.1",
     "commander": "^8.2.0",
     "eslint-plugin-jest": "^25.2.2",
+    "jest-cli": "^27.3.1",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "node": "^16.10.0",
