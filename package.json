@@ -16,6 +16,10 @@
   },
   "author": "Laytep",
   "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  },
   "bugs": {
     "url": "https://github.com/Laytep/frontend-project-lvl2/issues"
   },
