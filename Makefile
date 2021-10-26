@@ -1,5 +1,7 @@
+install: install-deps
+
 test:
-	npx -n --experimental-vm-modules jest
+	npm test
 	
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
