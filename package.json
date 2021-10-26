@@ -8,8 +8,7 @@
     "gendiff": "bin/genDiff.js"
   },
   "scripts": {
-    "test": "npx -n --experimental-vm-modules jest",
-    "test:watch": "npx -n --experimental-vm-modules jest --coverage --watch"
+    "test": "npx jest --bail"
   },
   "repository": {
     "type": "git",
@@ -17,10 +16,6 @@
   },
   "author": "Laytep",
   "license": "ISC",
-  "jest": {
-    "testEnvironment": "node",
-    "transform": {}
-  },
   "bugs": {
     "url": "https://github.com/Laytep/frontend-project-lvl2/issues"
   },
@@ -41,6 +36,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "jest": "^27.3.1",
+    "jest-circus": "^27.3.1",
     "prettier": "2.4.1"
   }
 }
