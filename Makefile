@@ -1,5 +1,3 @@
-install: install-deps
-
 test:
 	npm test
 	
