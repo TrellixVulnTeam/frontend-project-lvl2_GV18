@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import parser from "./parser.js";
 import diff from "./diff.js";
 

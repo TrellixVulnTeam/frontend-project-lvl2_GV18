@@ -27,6 +27,7 @@
   "dependencies": {
     "@jest/globals": "^27.3.1",
     "commander": "^8.2.0",
+    "eslint-plugin-jest": "^25.2.2",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "node": "^16.10.0",
