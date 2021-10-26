@@ -19,3 +19,11 @@ test("file1.json and file2.json diff", () => {
   const actual = genDiff(first, second);
   expect(actual).toEqual(expected);
 });
+
+test("file1.yml and file2.yml diff", () => {
+  const expected = readFixtureFile(`expected_file.txt`);
+  const first = `file1.yml`;
+  const second = `file2.yml`;
+  const actual = genDiff(first, second);
+  expect(actual).toEqual(expected);
+});
