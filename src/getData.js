@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 
 export const getDataFromFile = (filepath) => {
-  const absolutePath = path.resolve(process.cwd(), "__fixtures__", filepath);
+  const absolutePath = path.resolve(process.cwd(), filepath);
   return fs.readFileSync(absolutePath, "utf-8");
 };
 
