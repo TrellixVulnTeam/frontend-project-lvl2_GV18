@@ -1,4 +1,4 @@
-import _ from "lodash";
+import _ from 'lodash';
 
 const build = (data1, data2) => {
   const keys = _.union(_.keys(data1), _.keys(data2));
@@ -7,35 +7,35 @@ const build = (data1, data2) => {
     const value2 = data2[key];
     if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
       return {
-        type: "nested",
+        type: 'nested',
         key,
         children: build(value1, value2),
       };
     }
     if (!_.has(data2, key)) {
       return {
-        type: "removed",
+        type: 'removed',
         key,
         oldValue: value1,
       };
     }
     if (!_.has(data1, key)) {
       return {
-        type: "added",
+        type: 'added',
         key,
         newValue: value2,
       };
     }
     if (_.has(data1, key) && _.has(data2, key) && value1 !== value2) {
       return {
-        type: "changed",
+        type: 'changed',
         key,
         oldValue: value1,
         newValue: value2,
       };
     }
     return {
-      type: "unchanged",
+      type: 'unchanged',
       key,
       oldValue: value1,
     };

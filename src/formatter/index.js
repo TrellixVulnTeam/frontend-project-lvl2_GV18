@@ -1,12 +1,12 @@
-import stylish from "./stylish.js";
-import plain from "./plain.js";
-import json from "./json.js";
+import stylish from './stylish.js';
+import plain from './plain.js';
+import json from './json.js';
 
-const formatter = (data, outputFormat = "stylish") => {
+const formatter = (data, outputFormat = 'stylish') => {
   switch (outputFormat) {
-    case "json":
+    case 'json':
       return json(data);
-    case "plain":
+    case 'plain':
       return plain(data);
     default:
       return stylish(data);

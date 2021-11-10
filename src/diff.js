@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import _ from "lodash";
+import _ from 'lodash';
 
 const diff = (a, b) => {
   const file1 = a;
@@ -32,7 +32,7 @@ const diff = (a, b) => {
     }
   }
 
-  let result = "";
+  let result = '';
 
   // console.log(keys1, keys2, sameKeys, uniq1, uniq2)
 
