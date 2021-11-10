@@ -12,18 +12,21 @@ const getFixturePath = (filename) =>
 const readFixtureFile = (filename) =>
   fs.readFileSync(getFixturePath(filename), "utf-8").trim();
 
-test("file1.json and file2.json diff", () => {
-  const expected = readFixtureFile(`expected_file.txt`);
-  const first = `filepath1.json`;
-  const second = `filepath2.json`;
-  const actual = genDiff(first, second);
-  expect(actual).toEqual(expected);
-});
+const cases = [
+  ["json", "stylish"],
+  ["yml", "stylish"],
+  ["json", "plain"],
+  ["yml", "plain"],
+  ["json", "json"],
+  ["yml", "json"],
+];
 
-// test("file1.yml and file2.yml diff", () => {
-//   const expected = readFixtureFile(`expected_file.txt`);
-//   const first = `file1.yml`;
-//   const second = `file2.yml`;
-//   const actual = genDiff(first, second);
-//   expect(actual).toEqual(expected);
-// });
+describe.each(cases)("genDiff", (extention, format) => {
+  test(`${format} object`, () => {
+    const expected = readFixtureFile(`${format}.txt`);
+    const first = getFixturePath(`file1.${extention}`);
+    const second = getFixturePath(`file2.${extention}`);
+    const actual = genDiff(first, second, format);
+    expect(actual).toEqual(expected);
+  });
+});
