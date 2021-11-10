@@ -1,5 +1,5 @@
 {
-  "name": "frontend-project-lvl2",
+  "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "frontend-project",
   "type": "module",
@@ -8,7 +8,8 @@
     "gendiff": "bin/genDiff.js"
   },
   "scripts": {
-    "test": "npx jest --bail"
+    "test": "npx -n --experimental-vm-modules jest",
+    "test:watch": "npx -n --experimental-vm-modules jest --coverage --watch"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,10 @@
   },
   "author": "Laytep",
   "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  },
   "bugs": {
     "url": "https://github.com/Laytep/frontend-project-lvl2/issues"
   },
