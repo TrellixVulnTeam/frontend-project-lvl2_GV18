@@ -10,7 +10,9 @@ const stringify = (value) => {
 
 const render = (nodes) => {
   const iter = (node, nameKey) => {
-    const { key, type, children, oldValue, newValue } = node;
+    const {
+      key, type, children, oldValue, newValue,
+    } = node;
 
     const currentKey = `${nameKey}${key}`;
     switch (type) {
