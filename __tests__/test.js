@@ -14,16 +14,16 @@ const readFixtureFile = (filename) =>
 
 test("file1.json and file2.json diff", () => {
   const expected = readFixtureFile(`expected_file.txt`);
-  const first = `file1.json`;
-  const second = `file2.json`;
+  const first = `filepath1.json`;
+  const second = `filepath2.json`;
   const actual = genDiff(first, second);
   expect(actual).toEqual(expected);
 });
 
-test("file1.yml and file2.yml diff", () => {
-  const expected = readFixtureFile(`expected_file.txt`);
-  const first = `file1.yml`;
-  const second = `file2.yml`;
-  const actual = genDiff(first, second);
-  expect(actual).toEqual(expected);
-});
+// test("file1.yml and file2.yml diff", () => {
+//   const expected = readFixtureFile(`expected_file.txt`);
+//   const first = `file1.yml`;
+//   const second = `file2.yml`;
+//   const actual = genDiff(first, second);
+//   expect(actual).toEqual(expected);
+// });
